@@ -21,21 +21,36 @@ Program for calculating planetary positions ... yet, with distinction. Attend,
    (9 planets, 2 million days 3000 BC - 3000 AD) on one core of a Raspberry Pi 3 (Raspbian/gfortran)
    which completed in, wait for it,...  4 seconds.
 
- - Simplified BSD license! Take it, glare at it, spit on it, make it your own (but don't forget to use 
+ - Simplified BSD license! Take the program, glare at it, spit on it, make it your own (but don't forget to use 
    the BSD license if you publish or distribute, of course). Be nice and let me know if you find a mistake
    or have a nice improvement. Otherwise its FREE FREE FREE! And it runs fine using the free gfortran.
    
-   Key Routines
+                                    Key Routines
    
-   Subroutine calcelements - returns keplerian elements (and eccentric anomaly) for JD.
+   -- Subroutine calcelements - returns keplerian elements (and eccentric anomaly) for JD.
    
-   Subroutine helio  - returns selected planet j2000 ecliptic position (au) and velocity (au/yr) for JD.
+   -- Subroutine helio  - returns selected planet j2000 ecliptic position (au) and velocity (au/yr) for JD.
    
-   Subroutine ec2eq - converts ecliptic to equatorial.
+   -- Subroutine ec2eq - converts ecliptic to equatorial.
    
-   Subroutine sphere - converts to spherical coordinates.
+   -- Subroutine sphere - converts to spherical coordinates.
    
-   Sample Program
+                                    Sample Program
    
    Planets.f90 - compute all planets ecliptic and equatorial positions and velocities for specified Julian Date.
+   
+                                    Using Fortran
+   
+   We recommend gfortran, a free and modern FORTRAN. Available for Windows, OSX, Linux. ( see  https://gcc.gnu.org/wiki/GFortranBinaries ). Other complilers are excellent too, certainly. 
+   
+   Download the .f90 files and look at the top line for the command line needed to compile to an executable which runs from the command line.
+   
+  OF NOTE - OTHER ASTRONOMY PROGRAMS IN FORTRAN 
+   
+<ul>
+<li><a href="http://naif.jpl.nasa.gov/naif/toolkit.html" rel="nofollow">SPICE</a></li>
+<li><a href="http://aa.usno.navy.mil/software/novas/novas_info.php" rel="nofollow">NOVAS</a></li>
+<li><a href="http://www.iausofa.org" rel="nofollow">SOFA</a></li>
+<li><a href="https://github.com/jacobwilliams/Fortran-Astrodynamics-Toolkit" rel="nofollow">Fortran-Astrodynamics-Toolkit</a></li> 
+</ul>
    
