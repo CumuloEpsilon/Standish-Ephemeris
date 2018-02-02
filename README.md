@@ -1,10 +1,12 @@
 # Standish-Ephemeris
 Fortran90 Module - implemention of E.M. Standish's "Keplerian Elements for Approximate Positions of the Major Planets". 
+
                                              -- Cumulo Epsilon (2018) --
 
 Program for calculating planetary positions ... yet, with distinction. Attend,
 
-- Approximation Method and Data by a distinguished NASA/JPL Scientist (ret) E. M. Standish. 
+- Approximation Method and Data by a distinguished NASA/JPL Scientist (ret) E. M. Standish.
+
   (*see http://ssd.jpl.nasa.gov/txt/aprx_pos_planets.pdf )
 
 - Fortran 90 module faithfully implementing the simple but accurate Standish approximations for 
