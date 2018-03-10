@@ -21,6 +21,10 @@ Program for calculating planetary positions ... yet, with distinction. Attend,
    (9 planets, 2 million days 3000 BC - 3000 AD) on one core of a Raspberry Pi 3 (Raspbian/gfortran)
    which completed in, wait for it,...  4 seconds.
 
+- Accurate calculation of planet position. How accurate? JPL reports here https://ssd.jpl.nasa.gov/?planet_pos , and I
+  have done a check against DE430 authoritative ephemeris and present results here (see accuracy_standish.pdf). 
+  Basically, if 0.01 AU accuracy is good for you, you are good to go with this method. 
+
  - Simplified BSD license! Take the program, glare at it, spit on it, make it your own (but don't forget to use 
    the BSD license if you publish or distribute, of course). Be nice and let me know if you find a mistake
    or have a nice improvement. Otherwise its FREE FREE FREE! And it runs fine using the free gfortran.
@@ -43,7 +47,7 @@ Program for calculating planetary positions ... yet, with distinction. Attend,
    
    We recommend gfortran, a free and modern FORTRAN. Available for Windows, OSX, Linux. ( see  https://gcc.gnu.org/wiki/GFortranBinaries ). Other complilers are excellent too, certainly. 
    
-   Download the .f90 files and look at the top line for the command line needed to compile to an executable which runs from the command line.
+   Download the .f90 files and look at the top line for the command line needed to compile to an executable which runs from the command line. Be sure to check the errata file notes for late breaking bugs and corrections *before* you start crunching.
    
   OF NOTE - OTHER ASTRONOMY PROGRAMS IN FORTRAN 
    
