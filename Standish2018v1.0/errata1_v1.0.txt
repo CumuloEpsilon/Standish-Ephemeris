@@ -1,0 +1,41 @@
+Errata1_v1.0  3/10/2018
+
+The following corrections apply to files in Standish2018v1.0. Bug 20180219-1 is
+a one byte error which is nonetheless serious and must be corrected before using
+the Standish module in the extended range 3000 BC to 3000 AD. These bugs will be squashed in future releases. Other bugs here are cosmetic or non-critical performance improvements that are recommended and will be later implimented.
+
+Further errata may be issued for version 1.0, and should also be consulted.
+
+-Cumulo
+
+
+===
+Bug 20180207-01
+Standish_Module.f90 V1.0
+2/3/2018. Performance. Standish V1 Line 218 contains code "tz = eph(itbl)%o(13, np) * t ** 2 +"....
+The use of exponentiation (t**2) is correct but far more costly than simple multiplication. New versions of code will contain the revision "tz = eph(itbl)%o(13, np) * t * t +".
+
+===
+Bug 20180207-02
+Standish_module.f90 V1.0
+2/3/2018. Technical Non-material error. Standish V1 Line 164 contains code "po = s_ZERO".
+New versions of code will be revised to "p = s_ZERO".
+
+===
+Bug 20180207-03
+Planets.f90 V1.0
+2/3/2018. Cosmetic. Planets V1 Lines 28 and 28 contain the code "Write (, '(A10, 3F9.3,3F9.4)')".
+The velocities are printed in KPS rather than AU/YR, and F9.4 display can be revised to F9.3. New versions of code will contain the revision "Write (, '(A10, 6F9.3)')", along with adjustments to the spacing of the column headers.
+
+===
+Bug 20180219-1 Standish Module V1.0, function tbl(jd)
+function tbl selects which of the two Standish tables is to be used (1800AD-2050AD =>table 1, 3000BC-3000AD => table 2). Coding error caused selection of table 2 to fail, giving zero result for state vector. Line 197 therefore requires correction in Version 1.0
+
+V1.0 line 197 Standish_module.f90 currently reads
+If ((jd .Gt. eph(2)%jul1) .And. (jd .Lt. eph(2)%jul1)) tbl = 2
+CORRECT TO
+If ((jd .Gt. eph(2)%jul1) .And. (jd .Lt. eph(2)%jul2)) tbl = 2
+
+Apologies, of course. Testing continues. This bug will be corrected in next release.
+-CumuloEpsilon
+===
