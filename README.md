@@ -16,10 +16,6 @@ Program for calculating planetary positions ... yet, with distinction. Attend,
    proudly proclaimed over 400 years ago, that "The orbits of the planets are elipses, with the Sun at 
    one foci.", still lives, and that the modern version "The orbits of the planets are Chebyshev polynomials." 
    will not prevail (except in cases requiring high accuracy).
-  
- - Fast calculation of planet positions. How fast? No warrantees, but I did 18 million planet positions
-   (9 planets, 2 million days 3000 BC - 3000 AD) on one core of a Raspberry Pi 3 (Raspbian/gfortran)
-   which completed in, wait for it,...  4 seconds.
 
 - Accurate calculation of planet position. How accurate? JPL reports here https://ssd.jpl.nasa.gov/?planet_pos , and I
   have done a check against DE430 authoritative ephemeris and present results here (see accuracy_standish.pdf). 
