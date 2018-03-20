@@ -25,6 +25,8 @@ Program for calculating planetary positions ... yet, with distinction. Attend,
    the BSD license if you publish or distribute, of course). Be nice and let me know if you find a mistake
    or have a nice improvement. Otherwise its FREE FREE FREE! And it runs fine using the free gfortran.
    
+ - Don't forget to check out the project WIKI here at Github (see Wiki tab). 
+ 
                                     Key Routines
    
    -- Subroutine calcelements - returns keplerian elements (and eccentric anomaly) for JD.
